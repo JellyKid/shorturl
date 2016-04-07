@@ -49,7 +49,7 @@ module.exports = function(req,res){
               } else {
                 res.send({
                   original_url: path,
-                  short_url: "http://" + req.get('host') + "/" + short.id
+                  short_url: "http://" + req.get('host') + "/short/" + short.id
                 });
               }
             });
