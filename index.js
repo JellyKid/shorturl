@@ -27,7 +27,7 @@ module.exports = function(req,res){
     if(existingUrl){
       res.send({
         original_url: path,
-        short_url: "http://" + req.get('host') + "/" + existingUrl.id
+        short_url: "http://" + req.get('host') + "/short/" + existingUrl.id
       });
     } else {
       model.findById(path,function(err, existingShortUrl){ //find shortcode
