@@ -14,7 +14,7 @@ function setDefaults(req, res, next) {
     req.shortUrlPath = req.protocol + '://' + req.hostname + req.baseUrl +'/';
     return next();
   } else {
-    res.status(404).send('No path found!');
+    res.redirect(302,'../index.html');    
   }
 }
 
